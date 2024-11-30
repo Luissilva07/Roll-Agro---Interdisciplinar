@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0;
+}
+/*LOGO RODANDO*/
+
+#content {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+#content.fade-out {
+    transition: 0.5s;
+    filter: blur(40px);
+    -moz-filter: blur(40px);
+    -o-filter: blur(40px);
+    -ms-filter: blur(40px);
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    visibility: hidden;
+    /* Inicialmente escondido */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.loader.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.loader img {
+    width: 120px;
+    height: 120px;
+    animation: spin 0.8s linear infinite;
+    background-color: #000000;
+    border-radius: 50%;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    padding: 0px 20px;
+    color: #ffffff;
+    background: #11111F;
+    font-family: "Roboto Slab", serif;
+    font-weight: 400;
+}
+
+.logo,
+.links {
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.logo {
+    gap: 12px;
+}
+
+.logo img {
+    width: 170px;
+    height: 110px;
+    border-radius: 6px;
+    margin-left: 40px;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-right: 25px;
+}
+
+.navbar a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.25s;
+    padding-left: 35px;
+}
+
+a.join-link {
+    display: grid;
+    place-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    padding: 4px;
+    margin-left: 25px;
+    background: #97D405;
+}
+
+.link-login {
+    width: 25px;
+    height: 25px;
+}
+
+footer {
+    background-color: #121221;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    max-height: 300px;
+}
+
+
+.footer-top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.newsletter {
+    display: flex;
+}
+
+.newsletter input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 250px;
+}
+
+.newsletter button {
+    padding: 10px;
+    background-color: #cccccc;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #00ff88; 
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #00ff88; 
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.social-and-text {
+    text-align: center;
+    line-height: 2.5;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.social-and-text p {
+    font-size: 16px;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 0 10px;
+    margin-top: 20px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+
+.footer-bottom img {
+    width: 200px;
+    height: auto;
+    margin-top: -30px;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    color: #cccccc;
+    margin-top: -20px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #333;
+    margin: 20px 0;
+}
+
+#email-input::-webkit-input-placeholder {
+    font-size: 13px;
+    font-weight: 600;
+}

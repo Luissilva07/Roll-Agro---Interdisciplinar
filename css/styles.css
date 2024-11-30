@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+.banner {
+    width: 100%;
+    height: 500px;
+    margin-top: 0px;
+}
+
+.h1Cards1 {
+    padding: 30px 35px 0px 0px;
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+}
+
+.slider_prod {
+    width: 500px;
+    height: 400px;
+    margin-bottom: 150px;
+}
+
+.carousel-caption {
+    color: black;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3%;
+    gap: 25px;
+}
+.imgcard{
+    width: 180px;
+    height: 150px;
+    margin: 0 auto;
+    display: block;
+}
+.card {
+    height: 400px;
+    width: 280px;
+    margin-right: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 2px rgba(0 0 0/ 15%);
+}
+
+.card:hover {
+    transition: 0.2s;
+    transform: scale(0.97);
+    box-shadow: 0 0 5px rgba(0 0 0/ 40%);
+    border: 1px solid #00a72a;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.image-container img {
+    margin: 10px;
+    border-radius: 15px;
+    margin: 60px 120px 60px 110px;
+}
+
+
+.image-container img:nth-child(1) {
+    width: 500px;
+    height: 300px;
+}
+
+.image-container img:nth-child(2) {
+    width: 400px;
+    height: 250px;
+}
+
+.carousel-desce {
+    margin-top: 20rem;
+}
+.aa {
+    margin-top: 5px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 14px;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    text-align: justify;
+}
+.ab{
+    text-align: center;
+}
+.aa:hover{
+    color: #00a72a; /* Cor ao passar o mouse */
+}
+.aa:hover::after{
+    width: 100%;
+}
+/* PÁGINA DE CONTATOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO  */
+
+/* Estilos para a coluna 1 (à esquerda) */
+
+.coluna-1 {
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    border: solid 2px rgb(219, 217, 217);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 725px;
+}
+
+
+#contato {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    margin-top: 0px;
+}
+
+.titulo {
+    margin-top: 15px;
+    margin-left: 38px;
+    font-family: "Cinzel";
+    font-weight: 500;
+}
+
+.titulo1 {
+    margin-left: 38px;
+    font-family: "Cinzel";
+    font-size: 30px;
+}
+
+/* Estilos para o formulário */
+
+.formulario {
+    padding: 20px;
+    margin-left: 10px;
+}
+
+.formulario h2 {
+    margin-top: 0;
+    color: #333;
+    margin-left: 10px;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 10px;
+    color: #666;
+    margin-left: 10px;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="tel"],
+.formulario select#assunto {
+    width: 70%;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(97, 96, 96);
+    border-radius: 15px;
+    margin-left: 10px;
+    box-shadow: 8px 8px 2px rgba(0, 0, 0, 0.1);
+}
+
+.formulario textarea {
+    width: 70%;
+    height: 80px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(97, 96, 96);
+    border-radius: 20px;
+    margin-left: 10px;
+    box-shadow: 8px 8px 2px rgba(0, 0, 0, 0.1);
+}
+
+.formulario button[type="submit"] {
+    width: 70%;
+    margin-top: 13px;
+    height: 40px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.formulario button[type="submit"]:hover {
+    background-color: #02de39;
+    transition: 0.5s;
+}
+
+
+/*estilo para coluna 2*/
+
+.coluna-2 {
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    border: solid 2px rgb(219, 217, 217);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+    height: 725px;
+}
+
+@media (max-width: 768px) {
+    #contato {
+        flex-direction: column;
+    }
+
+    .coluna-1,
+    .coluna-2 {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+.tituloo {
+    margin-top: 15px;
+    margin-left: 35px;
+    font-family: "Cinzel";
+    font-weight: 500;
+}
+
+.tituloo1 {
+    margin-left: 35px;
+    font-family: "Cinzel";
+    font-size: 30px;
+}
+
+.tituloscontato {
+    margin-left: 130px;
+    margin-top: -55px;
+
+}
+
+.tituloscontato2 {
+    margin-left: 130px;
+    margin-top: -55px;
+}
+
+.tituloscontato3 {
+    margin-left: 130px;
+    margin-top: -70px;
+}
+
+.textocontato {
+    margin-left: 130px;
+    margin-top: 5px;
+    gap: 5px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 14px;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+.textocontato::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #02de39; /* Cor do sublinhado */
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+.textocontato:hover{
+    color: #02de39; /* Cor ao passar o mouse */
+}
+.textocontato:hover::after{
+    width: 100%;
+}
+
+.iconcontato {
+    width: 60px;
+    height: 60px;
+    margin-top: 25px;
+    margin-left: 38px;
+}
+
+.iconredes {
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    margin-bottom: -5px;
+    margin-inline: 10px;
+    margin-left: 2px;
+}
+
+.textopatrocinio {
+    width: 550px;
+    margin-left: 36px;
+    margin-top: 13px;
+    text-decoration: none;
+    color: inherit;
+    text-align: justify;
+    font-size: 14px;
+}
+
+.textobotao {
+    text-decoration: none;
+    color: inherit;
+}
+
+.button2 {
+    margin-left: 30px;
+    margin-top: 13px;
+    width: 70%;
+    height: 40px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.button2:hover {
+    background-color: #02de39;
+    transition: 0.5s;
+}
+
+.iconcontato1 {
+    width: 60px;
+    height: 60px;
+    margin-top: 60px;
+    margin-left: 38px;
+}
