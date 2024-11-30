@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Cadastro</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="https://kit.fontawesome.com/cf6fa412bd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <img class="logo" src="img/logo.svg" alt="Logo Roll Agro">
+    <div class="container">
+        <div class="buttonsForm">
+            <div class="btnColor"></div>
+            <button id="btnSignin">Login</button>
+            <button id="btnSignup">Cadastro</button>
+        </div>
+        <form id="signin" onsubmit="return validateForm('signin')">
+            <input type="text" id="signinEmail" class="required" placeholder="Email" required />
+            <i class="fas fa-envelope iEmail"></i>
+            <input type="password" id="signinPassword" class="required" placeholder="Senha" required />
+            <i class="fas fa-lock iPassword"></i>
+            <div class="divCheck">
+                <div id="captchaValueSignin"></div>
+                <input type="text" id="inputCaptchaSignin" placeholder="Captcha"
+                    maxlength="6">
+            </div>
+            <button id="submitBtn" style="margin-top: 30px;" type="submit">Logar</button>
+        </form>
+
+        <form id="signup" onsubmit="return validateForm('signup')" novalidate>
+            <input type="text" id="signupEmail" class="required" placeholder="Email" required />
+            <i class="fas fa-envelope iEmail"></i>
+            <input type="password" id="signupPassword" class="required" placeholder="Senha" required />
+            <i class="fas fa-lock iPassword"></i>
+            <input type="password" id="signupPassword2" class="required" placeholder="Confirme sua Senha" required />
+            <i class="fas fa-lock iPassword2"></i>
+            <div class="divCheck">
+                <div id="captchaValueSignup"></div>
+                <input type="text" id="inputCaptchaSignup" placeholder="Captcha"
+                    maxlength="6">
+            </div>
+            <div class="divTerms">
+                <input class="checkbox" type="checkbox" id="aceitar-termos" name="termos" disabled formnovalidate/>
+                <span><button id="termos-e-condicoes">Termos e Condições</button></span>
+            </div>
+            <button style="margin-top: 10px;" type="submit">Cadastrar-se</button>
+        </form>
+    </div>
+
+    <div id="popup-termos-e-condicoes" class="popup">
+        <div class="popup-content scroll-container">
+            <h2>Termos e Condições</h2>
+            <h4>Última atualização: 13/08/2024</h4><br>
+            <p>Bem-vindo ao Roll Agro. Ao acessar e usar nosso site, você concorda com os seguintes Termos de Uso. Se
+                não concordar com estes termos, pedimos que não utilize nosso site.</p><br>
+            <ul>
+                <li><b class="div"> 1. Aceitação dos Termos:</b>
+                    <ul>
+                        <li>● Ao usar o Roll Agro, você concorda em cumprir e estar legalmente vinculado a estes Termos
+                            de
+                            Uso.</li>
+                        <li>● O Roll Agro pode modificar estes termos a qualquer momento. A continuidade do uso do site
+                            constitui aceitação das mudanças.</li>
+                    </ul>
+                </li>
+                <li><b class="div">2. Uso do Site:</b>
+                    <ul>
+                        <li>● O Roll Agro é uma plataforma para compra e venda de produtos no setor agropecuário.</li>
+                        <li>● Você concorda em usar o site apenas para fins legais e em conformidade com todas as leis e
+                            regulamentos aplicáveis.</li>
+                    </ul>
+                </li>
+                <li><b class="div">3. Registro e Conta:</b>
+                    <ul>
+                        <li>● Para realizar compras ou vendas, você pode ser solicitado a criar uma conta.</li>
+                        <li>● Você concorda em fornecer informações verdadeiras, precisas e completas, e a manter suas
+                            informações atualizadas.</li>
+                    </ul>
+                </li>
+                <li><b class="div">4. Responsabilidade pelo Conteúdo:</b>
+                    <ul>
+                        <li>● Você é responsável pelo conteúdo que publica no Roll Agro, incluindo anúncios e descrições
+                            de produtos.</li>
+                        <li>● O Roll Agro não se responsabiliza por erros ou imprecisões no conteúdo fornecido por
+                            usuários.</li>
+                    </ul>
+                </li>
+                <li><b class="div">5. Propriedade Intelectual:</b>
+                    <ul>
+                        <li>● Todo o conteúdo e materiais no site, incluindo textos, gráficos, logotipos e software, são
+                            de propriedade do Roll Agro ou de seus licenciadores e são protegidos por leis de direitos
+                            autorais e propriedade intelectual.</li>
+                    </ul>
+                </li>
+                <li><b class="div">6. Limitação de Responsabilidade:</b>
+                    <ul>
+                        <li>● O Roll Agro não se responsabiliza por danos indiretos, incidentais ou consequenciais
+                            resultantes do uso ou incapacidade de usar o site.</li>
+                        <li>● Nossos serviços são fornecidos "no estado em que se encontram", sem garantias de qualquer
+                            tipo.</li>
+                    </ul>
+                </li>
+                <li><b class="div">7. Indenização:</b>
+                    <ul>
+                        <li>● Você concorda em indenizar e isentar o Roll Agro e seus afiliados, diretores, funcionários
+                            e
+                            agentes de qualquer reivindicação ou demanda, incluindo honorários advocatícios, feita por
+                            terceiros devido ou decorrente de seu uso do site.</li>
+                    </ul>
+                </li>
+                <li><b class="div">8. Encerramento:</b>
+                    <ul>
+                        <li>● O Roll Agro pode, a qualquer momento, suspender ou encerrar sua conta se acreditar que
+                            você
+                            violou estes Termos de Uso.</li>
+                    </ul>
+                </li>
+                <li><b class="div">9. Legislação Aplicável:</b>
+                    <ul>
+                        <li>● Estes Termos de Uso são regidos pelas leis do Brasil, e qualquer disputa relacionada a
+                            estes termos
+                            será resolvida nos tribunais competentes dessa jurisdição.</li>
+                    </ul>
+                </li>
+            </ul><br>
+            <h2>Política de Privacidade</h2>
+            <h4>Última atualização: 15/08/2024</h4><br>
+            <p>No Roll Agro, respeitamos sua privacidade e estamos comprometidos em proteger suas informações pessoais.
+                Esta Política de Privacidade explica como coletamos, usamos e protegemos suas informações quando você
+                usa nosso site.</p><br>
+            <ul>
+                <li><b class="div">1. Informações Coletadas:</b>
+                    <ul>
+                        <li><b>● Informações Pessoais</b>: Coletamos informações pessoais que você fornece ao criar uma
+                            conta, realizar uma compra ou entrar em contato conosco. Isso pode incluir nome, e-mail,
+                            endereço e informações de pagamento.</li>
+                        <li><b>● Informações de Navegação:</b>Coletamos informações sobre sua interação com nosso site,
+                            como
+                            endereço IP, tipo de navegador e páginas visitadas.</li>
+                    </ul>
+                </li>
+                <li><b class="div">2. Uso das Informações:</b>
+                    <ul>
+                        <li>● Para Prestação de Serviços: Usamos suas informações para processar pedidos, gerenciar sua
+                            conta e melhorar nossos serviços.</li>
+                        <li>● Comunicações: Podemos enviar e-mails com atualizações, ofertas e informações relacionadas
+                            ao
+                            seu uso do site. Você pode optar por não receber essas comunicações a qualquer momento.</li>
+                    </ul>
+                </li>
+                <li><b class="div">3. Compartilhamento de Informações:</b>
+                    <ul>
+                        <li>● Com Terceiros: Não compartilhamos suas informações pessoais com terceiros, exceto quando
+                            necessário para processar transações ou conforme exigido por lei.</li>
+                        <li>● Com Parceiros: Podemos compartilhar informações com parceiros que ajudam na operação do
+                            site, desde que esses parceiros concordem em manter a confidencialidade das suas
+                            informações.</li>
+                    </ul>
+                </li>
+                <li><b class="div">4. Segurança:</b>
+                    <ul>
+                        <li>● Adotamos medidas razoáveis para proteger suas informações pessoais contra acesso não
+                            autorizado, alteração ou divulgação. No entanto, nenhum método de transmissão pela internet
+                            é 100% seguro, e não podemos garantir segurança absoluta.</li>
+                    </ul>
+                </li>
+                <li><b class="div">5. Seus Direitos:</b>
+                    <ul>
+                        <li>
+                            ● Você tem o direito de acessar, corrigir ou excluir suas informações pessoais. Se desejar
+                            fazer isso, entre em contato conosco através do e-mail rollagro@gmail.com.
+                        </li>
+                    </ul>
+                </li>
+                <li><b class="div">6. Cookies e Tecnologias Semelhantes:</b>
+                    <ul>
+                        <li>● Utilizamos cookies para melhorar sua experiência no site, armazenar preferências e
+                            analisar o tráfego. Você pode configurar seu navegador para recusar cookies, mas isso pode
+                            afetar a funcionalidade do site.</li>
+                    </ul>
+                </li>
+                <li><b class="div">7. Alterações na Política:</b>
+                    <ul>
+                        <li>● Podemos atualizar esta Política de Privacidade periodicamente. As mudanças serão
+                            publicadas nesta página, e recomendamos que você revise esta política regularmente.
+                        <li>
+                    </ul>
+                </li>
+            </ul><br>
+            <p>Após a leitura, aceite os termos para ter acesso total ao nosso site, se você tiver perguntas ou
+                preocupações sobre esta Política de Privacidade, entre em contato conosco pelo e-mail: <a
+                    class="email-login" href="mailto:acessoriarollagro@gmail.com?subject=&body=">rollagro@gmail.com</a>
+            </p>
+            <button id="aceitar-termos-btn">Aceitar</button>
+            <button id="fechar-popup">Recusar</button>
+        </div>
+    </div>
+
+    <script src="script/login.js"></script>
+</body>
+
+</html>

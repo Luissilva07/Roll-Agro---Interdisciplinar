@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomePage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/head.css">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="shortcut icon" href="img/icon3.png" type="image/x-icon">
+    <style>
+        .BannerProd {
+            width: 95%;
+            margin: 20px 35px;
+            border-radius: 15px;
+            height: 450px;
+        }
+
+        .carrosse {
+            margin-top: 50px;
+            position: relative;
+            width: 1400px;
+            height: 500px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 50px;
+        }
+
+        .carrossel-images {
+            display: flex;
+            transition: transform 0.5s ease;
+            margin: 0px 0px 2000px 0px;
+        }
+
+        .carrossel-images img {
+            min-width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #d1d0d0;
+            color: #3a3b3b;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            /* Bordas arredondadas */
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            /* Para garantir que os botões fiquem acima das imagens */
+        }
+
+        .carousel-btn:hover {
+            background-color: #3a3b3b;
+            /* Azul escuro no hover */
+            color: #d1d0d0;
+            transform: translateY(-3px) rotate(2deg);
+            opacity: 0.9;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-button:hover {
+            /* Efeito padrão para ambas as setas */
+            transform: rotate(5deg);
+        }
+
+        /* Setas específicas */
+        .carousel-button.prev:hover {
+            /* Efeito para a seta anterior */
+            transform: rotate(-5deg);
+        }
+
+        .carousel-button.next:hover {
+            /* Efeito para a seta próxima */
+            transform: rotate(5deg);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .carousel{
+            margin-bottom: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="img/logo.svg" />
+                </div>
+                <div class="links">
+                    <a href="index.html">Menu</a>
+                    <a href="produtos.html">Produtos</a>
+                    <a href="contato.html">Contatos</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="login.html" class="join-link"><img class="link-login" src="img/profile.png" alt="" /></a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <img class="banner" src="img/ft.jfif" alt="" />
+
+            <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                <h1 class="h1Cards1">Produtos Favoritos</h1>
+                <div class="carousel-indicators" style="position: absolute; margin-bottom: -40px;">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <div class="card ">
+                                    <div class="card-body">
+                                        <a class="aa" href="#">
+                                            <img class="imgcard" src="img/imgcards/card1.png"
+                                                alt="Trator estreito de 36cv">
+                                            <h5 class="card-title ab">Trator estreito de 36cv</h5>
+                                            <p class="card-text">
+                                                <ul>
+                                                    <li>Transmissão 8x8 sincronizada, com reversor mecânico;
+                                                        Estrutura de proteção rebatível (EPC);</li>
+                                                    <li>PTO 540 e 540Econômica;</li>
+                                                    <li>Dimensões reduzidas.</li>
+                                                </ul>
+                                            </p>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="card ">
+                                    <div class="card-body">
+                                        <a class="aa" href="#">
+                                            <img class="imgcard" src="img/imgcards/card3.png"
+                                                alt="Trator estreito de 36cv">
+                                            <h5 class="card-title ab">Colheitadeira de Grãos S430</h5>
+                                            <p class="card-text">
+                                                <ul>
+                                                    <li>Mais produtividade - Tecnologia rotor;</li>
+                                                    <li>Alta qualidade de grãos - Sistema de Limpeza DF4;</li>
+                                                    <li>Baixo índice de perdas - Ajuste Automático ao Terreno – ATA;
+                                                    </li>
+                                                    <li>Agricultura de Precisão.</li>
+                                                </ul>
+                                            </p>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="card ">
+                                    <div class="card-body">
+                                        <a class="aa" href="#">
+                                            <img class="imgcard" src="img/imgcards/card2.png"
+                                                alt="Trator estreito de 36cv">
+                                            <h5 class="card-title ab">Tratores 5070E</h5>
+                                            <p class="card-text">
+                                                <ul>
+                                                    <li>Versões cabinados e plataformados;</li>
+                                                    <li>Transmissão sincronizada 9x3 ou 12x12 com reversor
+                                                        eletro-hidráulico;</li>
+                                                    <li>TDP independente e econômica;</li>
+                                                    <li>3 anos de garantia.</li>
+                                                </ul>
+                                            </p>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <div class="card ">
+                                    <div class="card-body">
+                                        <a class="aa" href="#">
+                                            <img class="imgcard" src="img/imgcards/card4.png"
+                                                alt="Trator estreito de 36cv">
+                                            <h5 class="card-title ab">Pulverizadores 4630</h5>
+                                            <p class="card-text">
+                                                <ul>
+                                                    <li>Tamanho compacto perfeito para campos menores;</li>
+                                                    <li>Barra de 24 metros ou 27 metros (opcional);</li>
+                                                    <li>Menor consumo de combustível com sistema FieldCruise;</li>
+                                                    <li>Sistema SprayStar™ que controla o fluxo e pressão da
+                                                        pulverização.</li>
+                                                </ul>
+                                            </p>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <div class="card ">
+                                    <div class="card-body">
+                                        <a class="aa" href="#">
+                                            <img class="imgcard" src="img/imgcards/card1.png"
+                                                alt="Trator estreito de 36cv">
+                                            <h5 class="card-title ab">Trator estreito de 36cv</h5>
+                                            <p class="card-text">
+                                                <ul>
+                                                    <li>Transmissão 8x8 sincronizada, com reversor mecânico;
+                                                        Estrutura de proteção rebatível (EPC);</li>
+                                                    <li>PTO 540 e 540Econômica;</li>
+                                                    <li>Dimensões reduzidas.</li>
+                                                </ul>
+                                            </p>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="card ">
+                                    <div class="card-body">
+                                        <a class="aa" href="#">
+                                            <img class="imgcard" src="img/imgcards/card1.png"
+                                                alt="Trator estreito de 36cv">
+                                            <h5 class="card-title ab">Trator estreito de 36cv</h5>
+                                            <p class="card-text">
+                                                <ul>
+                                                    <li>Transmissão 8x8 sincronizada, com reversor mecânico;
+                                                        Estrutura de proteção rebatível (EPC);</li>
+                                                    <li>PTO 540 e 540Econômica;</li>
+                                                    <li>Dimensões reduzidas.</li>
+                                                </ul>
+                                            </p>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="card ">
+                                    <div class="card-body">
+                                        <a class="aa" href="#">
+                                            <img class="imgcard" src="img/imgcards/card1.png"
+                                                alt="Trator estreito de 36cv">
+                                            <h5 class="card-title ab">Trator estreito de 36cv</h5>
+                                            <p class="card-text">
+                                                <ul>
+                                                    <li>Transmissão 8x8 sincronizada, com reversor mecânico;
+                                                        Estrutura de proteção rebatível (EPC);</li>
+                                                    <li>PTO 540 e 540Econômica;</li>
+                                                    <li>Dimensões reduzidas.</li>
+                                                </ul>
+                                            </p>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="card ">
+                                    <div class="card-body">
+                                        <a class="aa" href="#">
+                                            <img class="imgcard" src="img/imgcards/card1.png"
+                                                alt="Trator estreito de 36cv">
+                                            <h5 class="card-title ab">Trator estreito de 36cv</h5>
+                                            <p class="card-text">
+                                                <ul>
+                                                    <li>Transmissão 8x8 sincronizada, com reversor mecânico;
+                                                        Estrutura de proteção rebatível (EPC);</li>
+                                                    <li>PTO 540 e 540Econômica;</li>
+                                                    <li>Dimensões reduzidas.</li>
+                                                </ul>
+                                            </p>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <div class="card ">
+                                    <div class="card-body">
+                                        <a class="aa" href="#">
+                                            <img class="imgcard" src="img/imgcards/card1.png"
+                                                alt="Trator estreito de 36cv">
+                                            <h5 class="card-title ab">Trator estreito de 36cv</h5>
+                                            <p class="card-text">
+                                                <ul>
+                                                    <li>Transmissão 8x8 sincronizada, com reversor mecânico;
+                                                        Estrutura de proteção rebatível (EPC);</li>
+                                                    <li>PTO 540 e 540Econômica;</li>
+                                                    <li>Dimensões reduzidas.</li>
+                                                </ul>
+                                            </p>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="card ">
+                                    <div class="card-body">
+                                        <a class="aa" href="#">
+                                            <img class="imgcard" src="img/imgcards/card1.png"
+                                                alt="Trator estreito de 36cv">
+                                            <h5 class="card-title ab">Trator estreito de 36cv</h5>
+                                            <p class="card-text">
+                                                <ul>
+                                                    <li>Transmissão 8x8 sincronizada, com reversor mecânico;
+                                                        Estrutura de proteção rebatível (EPC);</li>
+                                                    <li>PTO 540 e 540Econômica;</li>
+                                                    <li>Dimensões reduzidas.</li>
+                                                </ul>
+                                            </p>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="card ">
+                                    <div class="card-body">
+                                        <a class="aa" href="#">
+                                            <img class="imgcard" src="img/imgcards/card1.png"
+                                                alt="Trator estreito de 36cv">
+                                            <h5 class="card-title ab">Trator estreito de 36cv</h5>
+                                            <p class="card-text">
+                                                <ul>
+                                                    <li>Transmissão 8x8 sincronizada, com reversor mecânico;
+                                                        Estrutura de proteção rebatível (EPC);</li>
+                                                    <li>PTO 540 e 540Econômica;</li>
+                                                    <li>Dimensões reduzidas.</li>
+                                                </ul>
+                                            </p>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="card ">
+                                    <div class="card-body">
+                                        <a class="aa" href="#">
+                                            <img class="imgcard" src="img/imgcards/card1.png"
+                                                alt="Trator estreito de 36cv">
+                                            <h5 class="card-title ab">Trator estreito de 36cv</h5>
+                                            <p class="card-text">
+                                                <ul>
+                                                    <li>Transmissão 8x8 sincronizada, com reversor mecânico;
+                                                        Estrutura de proteção rebatível (EPC);</li>
+                                                    <li>PTO 540 e 540Econômica;</li>
+                                                    <li>Dimensões reduzidas.</li>
+                                                </ul>
+                                            </p>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="carrosse">
+                <div class="carrossel-images">
+                    <img class="BannerProd" src="./img/Banner01.jpg" alt="Banner Produtos">
+                    <img class="BannerProd" src="./img/Banner02.jpg" alt="Banner Produtos">
+                    <img class="BannerProd" src="./img/Banner03.jpg" alt="Banner Produtos">
+                </div>
+                <button class="carousel-button prev btn" onclick="moveSlide(-1)">❮</button>
+                <button class="carousel-button next btn" onclick="moveSlide(1)">❯</button>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-top">
+                <div class="newsletter">
+                    <input type="email" id="email-input" placeholder="enter your email" />
+                    <button type="submit" onclick="enviarEmail()">→</button>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Carrinho</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Equipe</a></li>
+                    </ul>
+                </nav>
+                <div class="social-and-text">
+                    <div class="social-icons">
+                        <a href="#"><img onmouseover="whatsapp()" id="imagem1" src="./img/Whatsapp.png"
+                                alt="WhatsApp"></a>
+                        <a href="#"><img onmouseover="facebook()" src="./img/facebook.png" id="imagem2"
+                                alt="Facebook"></a>
+                        <a href="https://www.instagram.com/roll.agro/"><img onmouseover="instagram()" id="imagem3"
+                                src="./img/instagram.png" alt="Instagram"></a>
+                    </div>
+                    <p>Um bom plantiu resulta em uma boa colheita</p>
+                </div>
+            </div>
+            <hr />
+            <div class="footer-bottom">
+                <img src="./img/logo.svg" alt="Roll Agro">
+                <p>© 2024 ROLL COMPANY. A ROLL AGRO é uma marca comercial da ROLL COMPANY. Faça compras de produtos de
+                    alta
+                    qualidade e de boa competência.</p>
+            </div>
+        </footer>
+    </div>
+    <div id="loader" class="loader">
+        <img src="img/icon2.jpeg" alt="Carregando..." />
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js "
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz "
+        crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js "
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r "
+        crossorigin="anonymous "></script>
+    <script src="./script/script.js"></script>
+    <script>
+        let slideIndex = 0;
+
+        function showSlides(n) {
+            const slides = document.querySelectorAll(".carrossel-images img");
+            const totalSlides = slides.length;
+
+            // Restringe o índice ao número de slides
+            slideIndex = (n + totalSlides) % totalSlides;
+
+            // Calcula o deslocamento
+            const offset = -slideIndex * 100;
+            document.querySelector(".carrossel-images").style.transform = `translateX(${offset}%)`;
+        }
+
+        function moveSlide(n) {
+            showSlides(slideIndex + n);
+        }
+
+        // Inicializa o carrossel mostrando o primeiro slide
+        showSlides(slideIndex);
+
+    </script>
+</body>
+
+</html>

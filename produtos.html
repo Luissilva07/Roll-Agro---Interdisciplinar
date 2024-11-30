@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomePage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/head.css">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="shortcut icon" href="img" type="image/x-icon">
+    <link rel="shortcut icon" href="img/icon3.png" type="image/x-icon">
+    <style>
+       #productList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta automaticamente o número de colunas */
+    gap: 20px; /* Espaçamento entre os cards */
+    padding: 50px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.product {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espaça os itens para empurrar o texto para baixo */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    text-align: center;
+    min-height: 350px; /* Altura mínima para todos os cards */
+}
+
+.product img {
+    width: 100%; /* Largura da imagem ocupa 100% do card */
+    height: auto; /* Altura automática para manter a proporção */
+    max-width: 200px; /* Limita a largura máxima da imagem */
+    margin: 10px 0; /* Margem vertical para espaçamento */
+    flex-grow: 1; /* Permite que a imagem ocupe o espaço disponível */
+}
+
+.product h2 {
+    font-size: 18px;
+    margin: 0; /* Remove margem para melhor alinhamento */
+}
+
+.product a {
+    background: #28a745; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 20px; /* Padding do botão */
+    border-radius: 5px; /* Bordas arredondadas do botão */
+    text-decoration: none; /* Remove sublinhado do link */
+    width: 100%; /* Botão ocupa toda a largura do card */
+    box-sizing: border-box; /* Inclui padding na largura total */
+    margin-top: 10px; /* Margem superior para espaçamento */
+}
+
+/* Adicionando um estilo para garantir que todos os h2 e links tenham a mesma altura */
+.product h2, .product a {
+    min-height: 40px; /* Altura mínima para h2 e link */
+    display: flex; /* Usar flex para centralizar o texto */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+        .filter {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #filterButtons {
+            display: flex;
+            margin: 20px 20px;
+            flex-wrap: wrap;
+        }
+
+        #filterButtons button {
+            width: 150px;
+            height: 180px;
+            margin: 0px 15px;
+            background-color: #f1f1f1;
+            color: rgb(0, 0, 0);
+            font-weight: 600;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            display: grid;
+            align-items: center;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        #filterButtons button img {
+            margin: 0px 15px;
+            width: 120px;
+            height: 110px;
+        }
+
+        #filterButtons button:hover {
+            background-color: #c9c9c9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        #clearFilterButton {
+            width: 150px;
+            height: 180px;
+            background-color: #8d0210;
+            color: white;
+            font-weight: 600;
+            border: 2px solid #8d0210;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin: 20px 30px 0px 0px;
+        }
+
+        #clearFilterButton:hover {
+            background-color: #be0518;
+            border: none;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .BannerProd {
+            width: 95%;
+            margin: 20px 35px;
+            border-radius: 15px;
+            height: 450px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="img/logo.svg" />
+                </div>
+                <div class="links">
+                    <a href="index.html">Menu</a>
+                    <a href="produtos.html">Produtos</a>
+                    <a href="contato.html">Contatos</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="login.html" class="join-link"><img class="link-login" src="img/profile.png" alt="" /></a>
+                </div>
+            </nav>
+        </header>
+        <main class="produtin">
+            <img class="BannerProd" src="./img/BannerProd.jpg" alt="Banner Produtos">
+            <div class="filter">
+                <div id="filterButtons"></div>
+                <button id="clearFilterButton">Limpar Filtros</button>
+            </div>
+            <div id="productList"></div>
+        </main>
+        <footer>
+            <div class="footer-top">
+                <div class="newsletter">
+                    <input type="email" id="email-input" placeholder="Digite seu Email para ser notificado" />
+                    <button type="submit" onclick="enviarEmail()">→</button>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Carrinho</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Equipe</a></li>
+                    </ul>
+                </nav>
+                <div class="social-and-text">
+                    <div class="social-icons">
+                        <a href="#"><img onmouseover="whatsapp()" id="imagem1" src="./img/Whatsapp.png"
+                                alt="WhatsApp"></a>
+                        <a href="#"><img onmouseover="facebook()" src="./img/facebook.png" id="imagem2"
+                                alt="Facebook"></a>
+                        <a href="https://www.instagram.com/roll.agro/"><img onmouseover="instagram()" id="imagem3"
+                                src="./img/instagram.png" alt="Instagram"></a>
+                    </div>
+                    <p>"Um bom plantiu resulta em uma boa colheita"</p>
+                </div>
+            </div>
+            <hr />
+            <div class="footer-bottom">
+                <img class="logo" src="./img/logo.svg" alt="Roll Agro">
+                <p>© 2024 ROLL COMPANY. A ROLL AGRO é uma marca comercial da ROLL COMPANY. Faça compras de produtos de
+                    alta
+                    qualidade e de boa competência.</p>
+            </div>
+        </footer>
+    </div>
+    <div id="loader" class="loader">
+        <img src="img/icon2.jpeg" alt="Carregando..." />
+    </div>
+    <script src="./script/script.js"></script>
+</body>
+
+</html>

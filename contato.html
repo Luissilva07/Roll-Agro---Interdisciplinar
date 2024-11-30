@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>HomePage</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="css/head.css">
+	<link rel="stylesheet" href="css/styles.css" />
+	<link rel="shortcut icon" href="img" type="image/x-icon">
+	<link rel="shortcut icon" href="img/icon3.png" type="image/x-icon">
+</head>
+
+<body>
+	<div id="content">
+		<header>
+			<nav class="navbar">
+				<div class="logo">
+					<img src="img/logo.svg" />
+				</div>
+				<div class="links">
+					<a href="index.html">Menu</a>
+					<a href="produtos.html">Produtos</a>
+					<a href="contato.html">Contatos</a>
+					<a href="sobre.html">Sobre</a>
+					<a href="login.html" class="join-link"><img class="link-login" src="img/profile.png" alt="" /></a>
+				</div>
+			</nav>
+		</header>
+		<main id="contato">
+			<div class="coluna-1">
+				<h1 class="titulo">FORMULÁRIO</h1>
+				<h1 class="titulo1">DE CONTATO</h1>
+				<div class="formulario">
+					<form>
+						<label for="nome">Nome completo:</label>
+						<input type="text" id="nome" name="nome" placeholder="Exemplo: Matheus Henrique Gobbo" required>
+
+						<label for="email">E-mail:</label>
+						<input type="email" id="email" name="email" placeholder="Exemplo: matheusgobbo@gmail.com"
+							required>
+
+						<label for="celular">Celular:</label>
+						<input type="tel" id="celular" name="celular" placeholder="Exemplo: (11) 11111-1111" required>
+
+						<label for="assunto">Assunto:</label>
+						<select name="assunto" id="assunto" required>
+							<option value="selecione" disabled selected>Selecione o assunto</option>
+							<option value="Reclamacao">Reclamação</option>
+							<option value="Reembolso">Reembolso</option>
+							<option value="Sugestao">Sugestão</option>
+							<option value="outro">Outro</option>
+						</select>
+
+						<label for="mensagem">Mensagem:</label>
+						<textarea id="mensagem" name="mensagem" placeholder="Digite aqui sua mensagem"
+							required></textarea>
+
+						<button type="submit">Enviar</button>
+					</form>
+				</div>
+			</div>
+			<div class="coluna-2">
+				<h1 class=" tituloo">ASSESSORIA</h1>
+				<h1 class="tituloo1 ">ROLL AGRO</h1>
+				<img class="iconcontato" src="img/icontelefone.svg" alt="imagem">
+				<h2 class="tituloscontato">Telefones</h2>
+				<a href="https://api.whatsapp.com/send/?phone=5518996493076&text=Ol%C3%A1%21+%EF%BF%BD&type=phone_number&app_absent=0"
+					class="textocontato">(18) 99649-3076</a>
+				<br>
+				<img class="iconcontato1" src="img/iconemail.svg" alt="imagem">
+				<h2 class="tituloscontato2">E-Mail</h2>
+				<a href="mailto:acessoriarollagro@gmail.com?subject=&body=" class="textocontato">rollagro@gmail.com</a>
+				<br>
+				<img class="iconcontato1" src="img/iconredesocial.svg" alt="imagem">
+				<h2 class="tituloscontato3">Redes Sociais</h2>
+				<a href="" class="textocontato"> <img class="iconredes" src="img/facebook (2).png"
+						alt="Logo facebook">Roll
+					Agro</a>
+				<br>
+				<a href="https://www.instagram.com/roll.agro/?igsh=MWtzdDN2a3dqYndsMA%3D%3D&utm_source=qr"
+					class="textocontato"> <img class="iconredes" src="img/instagram (2).png"
+						alt="Logo instagram">roll.agro</a>
+				<br>
+				<a href="https://x.com/agroroll?s=21" class="textocontato"> <img class="iconredes" src="img/twitter.png"
+						alt="Logo X">roll.agro</a>
+				<br><br>
+				<h1 class="tituloo">PATROCÍNIOS</h1>
+				<p class="textopatrocinio">A ROLL AGRO apoia eventos ligados às linhas de atuação da companhia ou à
+					temas
+					transversais tratados pela empresa, bem como projetos culturais, sociais, ambientais ou esportivos
+					que
+					agreguem valor à marca ou ao posicionamento da empresa.
+					Caso seu projeto atenda todos os parâmetros elencados na política da companhia, você pode
+					encaminhá-lo
+					pelo email rollagro@gmail.com.br.</p>
+				<button class="button2" type="submit"><a class="textobotao"
+						href="mailto:rollagro@gmail.com?subject=PARCERIA&body=">Enviar</a></button>
+			</div>
+		</main>
+	</div>
+	<div id="loader" class="loader">
+		<img src="img/icon2.jpeg" alt="Carregando..." />
+	</div>
+	<footer>
+        <div class="footer-top">
+            <div class="newsletter">
+                <input type="email" id="email-input" placeholder="enter your email" />
+                <button type="submit" onclick="enviarEmail()">→</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Carrinho</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Equipe</a></li>
+                </ul>
+            </nav>
+            <div class="social-and-text">
+                <div class="social-icons">
+                    <a href="#"><img onmouseover="whatsapp()" id="imagem1" src="./img/Whatsapp.png" alt="WhatsApp"></a>
+                    <a href="#"><img onmouseover="facebook()" src="./img/facebook.png" id="imagem2" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/roll.agro/"><img onmouseover="instagram()" id="imagem3"
+                            src="./img/instagram.png" alt="Instagram"></a>
+                </div>
+                <p>Um bom plantiu resulta em uma boa colheita</p>
+            </div>
+        </div>
+        <hr />
+        <div class="footer-bottom">
+            <img src="./img/logo.svg" alt="Roll Agro">
+            <p>© 2024 ROLL COMPANY. A ROLL AGRO é uma marca comercial da ROLL COMPANY. Faça compras de produtos de alta
+                qualidade e de boa competência.</p>
+        </div>
+    </footer>
+	<script src="./script/script.js"></script>
+</body>
+
+</html>
